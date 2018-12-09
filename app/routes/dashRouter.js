@@ -2,6 +2,10 @@ var dash = require('../controllers/dashController');
 
 module.exports = function(app) {
 
-    app.get('/', dash.teste);
+    app.get('/', function(req, res){
+        return res.json({'status': 'ok'})
+    });
+
+    app.get('/docentes', dash.getDocentes);
 
 };
