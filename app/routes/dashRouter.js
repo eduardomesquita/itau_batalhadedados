@@ -8,4 +8,8 @@ module.exports = function(app) {
 
     app.get('/docentes', dash.getDocentes);
 
+    app.get('/matriculas', dash.getMatriculas);
+
+    app.get('/pense', dash.getPense);
+
 };
