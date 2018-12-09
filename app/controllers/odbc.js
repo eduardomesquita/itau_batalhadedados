@@ -1,11 +1,11 @@
 var exports = module.exports = {}
 var db = require('odbc')()
-  , cn = process.env.ODBC_CONNECTION_STRING
+  , cn = 'HIVE_HACKATHON'
   ;
 
 exports.connection = function(query){
 
-    return new Promises(function(resolver){
+    return new Promise(function(resolver){
         db.open(cn, function (query ,err) {
             if (err) return console.log(err);
             
